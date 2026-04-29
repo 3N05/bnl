@@ -1,0 +1,1293 @@
+/* ============================================================================
+   BRIDGEWORKS NETWORK LIMITED — styles.css
+   ============================================================================
+   TABLE OF CONTENTS
+   01. Design Tokens (CSS Variables)
+   02. Reset & Base
+   03. Typography Helpers
+   04. Animations & Keyframes
+   05. Scroll Reveal Utility
+   06. Navigation
+   07. Buttons
+   08. Shared Section Utilities
+   09. Hero Section
+   10. Stats Band
+   11. Gallery / Slideshow
+   12. Donate Section
+   13. Footer
+   14. About Page — Hero
+   15. About Page — Body Sections
+   16. Contact Section
+   17. Responsive — Tablet (max-width: 900px)
+   18. Responsive — Mobile (max-width: 640px)
+   ============================================================================ */
+
+
+/* ============================================================================
+   01. DESIGN TOKENS
+   Edit colours, fonts and spacing here — changes flow through the whole site.
+   ============================================================================ */
+:root {
+  /* Brand colours */
+  --navy:        #1a2d4f;
+  --navy-deep:   #0f1e35;
+  --gold:        #c9a227;
+  --gold-light:  #e8c04a;
+  --green:       #3a7d44;
+
+  /* Neutral palette */
+  --cream:       #f8f5ef;
+  --white:       #ffffff;
+  --text:        #2c3e50;
+  --text-light:  #5a6a7a;
+  --border:      #e2ddd4;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Layout */
+  --nav-height:   72px;
+  --max-width:    1200px;
+  --section-pad:  4.5rem 2rem;
+}
+
+
+/* ============================================================================
+   02. RESET & BASE
+   ============================================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+
+/* ============================================================================
+   03. TYPOGRAPHY HELPERS
+   ============================================================================ */
+
+/* Small gold all-caps label above section headings */
+.section-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+/* Primary section heading */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Section intro text */
+.section-sub {
+  font-size: 0.97rem;
+  color: var(--text-light);
+  line-height: 1.75;
+  max-width: 540px;
+}
+
+
+/* ============================================================================
+   04. ANIMATIONS & KEYFRAMES
+   ============================================================================ */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+
+/* ============================================================================
+   05. SCROLL REVEAL
+   Add class="reveal" to any element. JS adds "visible" when it scrolls in.
+   ============================================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ============================================================================
+   06. NAVIGATION
+   ============================================================================ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+
+nav.scrolled {
+  box-shadow: 0 2px 20px rgba(26,45,79,0.10);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: var(--nav-height);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  height: 46px;
+  width: auto;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.nav-logo-text span:first-child {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.nav-logo-text span:last-child {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s;
+}
+
+.nav-links a:hover { color: var(--navy); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* Donate CTA pill in nav */
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+  padding: 0.45rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background 0.2s, transform 0.15s !important;
+}
+
+.nav-cta::after { display: none !important; }
+.nav-cta:hover  { background: var(--gold-light) !important; transform: translateY(-1px); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.28s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile dropdown */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 1rem 2rem 1.5rem;
+  gap: 0.9rem;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a:last-child { border-bottom: none; }
+
+.mobile-menu .mob-cta {
+  background: var(--gold);
+  color: var(--navy) !important;
+  text-align: center;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  border-bottom: none !important;
+  margin-top: 0.4rem;
+}
+
+
+/* ============================================================================
+   07. BUTTONS
+   ============================================================================ */
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 0.8rem 1.9rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,162,39,0.32);
+}
+
+.btn-navy {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+}
+
+.btn-navy:hover {
+  background: var(--navy-deep) !important;
+  box-shadow: 0 6px 20px rgba(26,45,79,0.28) !important;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  color: var(--white);
+  padding: 0.8rem 1.9rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+
+/* Form submit button */
+.btn-submit {
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: var(--navy-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(26,45,79,0.22);
+}
+
+
+/* ============================================================================
+   08. SHARED SECTION UTILITIES
+   ============================================================================ */
+
+/* Show/hide pages */
+.page        { display: none; }
+.page.active { display: block; }
+
+/* Centred max-width wrapper */
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Gold-to-green divider bar (about page) */
+.divider {
+  width: 44px; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--green));
+  border-radius: 2px;
+  margin: 0.85rem 0 1.4rem;
+}
+
+/* Hashtag pill */
+.hashtag {
+  background: rgba(26,45,79,0.06);
+  border: 1px solid rgba(26,45,79,0.1);
+  color: var(--navy);
+  padding: 0.28rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* Green partner badge */
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(58,125,68,0.09);
+  border: 1px solid rgba(58,125,68,0.22);
+  color: var(--green);
+  padding: 0.27rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+/* Initiative card */
+.initiative-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2.25rem;
+}
+
+.initiative-icon {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  border-radius: 13px;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.initiative-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 0.65rem;
+}
+
+.initiative-card p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Tick checklist inside initiative cards */
+.support-list {
+  list-style: none;
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.support-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.87rem;
+  color: var(--text);
+}
+
+.support-list li::before {
+  content: '✓';
+  width: 19px; height: 19px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+
+/* ============================================================================
+   09. HERO SECTION
+   ============================================================================ */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(155deg, var(--navy-deep) 0%, var(--navy) 55%, #1e4060 100%);
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dot-grid texture */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Decorative glow orbs */
+.hero-glow-gold {
+  position: absolute; right: -80px; top: 45%;
+  transform: translateY(-50%);
+  width: 560px; height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,162,39,0.13) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-glow-green {
+  position: absolute; left: -60px; bottom: -60px;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(58,125,68,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Two-column inner */
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Location + hashtag badge */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,162,39,0.15);
+  border: 1px solid rgba(201,162,39,0.28);
+  color: var(--gold-light);
+  padding: 0.32rem 1rem;
+  border-radius: 100px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+  animation: fadeUp 0.55s ease both;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 1.35rem;
+  animation: fadeUp 0.55s 0.1s ease both;
+}
+
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+
+.hero p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.70);
+  margin-bottom: 2.25rem;
+  max-width: 460px;
+  animation: fadeUp 0.55s 0.2s ease both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.55s 0.3s ease both;
+}
+
+/* Logo column */
+.hero-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.75s 0.15s ease both;
+}
+
+.hero-logo-wrap img {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.45));
+  border-radius: 14px;
+}
+
+
+/* ============================================================================
+   10. STATS BAND
+   ============================================================================ */
+.stats-band {
+  background: var(--cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2.75rem 2rem;
+}
+
+.stats-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item { padding: 0.5rem 1rem; }
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  line-height: 1;
+}
+
+.stat-unit { color: var(--gold); }
+
+.stat-item p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-top: 0.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+/* ============================================================================
+   11. GALLERY / SLIDESHOW
+   Key design decisions:
+   - .slideshow-wrap  = outer container, normal flow, no overflow hidden
+   - .slideshow       = clips the sliding images only (overflow: hidden)
+   - .slides-track    = the moving strip of slides (flex row)
+   - .slide           = individual slide, min-width 100%, flex column
+   - img inside slide = fixed aspect ratio via padding-top trick on wrapper
+   - .slide-dots      = outside .slideshow so they're never clipped
+   ============================================================================ */
+.gallery-section {
+  background: var(--white);
+  padding: var(--section-pad);
+  border-top: 1px solid var(--border);
+}
+
+.gallery-header {
+  margin-bottom: 2.5rem;
+}
+
+/* Outer wrapper — standard block, full width of section-inner */
+.slideshow-wrap {
+  position: relative;
+  width: 100%;
+}
+
+/* The clipping box — only this element hides overflow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;                /* clips slides left/right of viewport */
+  background: var(--navy-deep);
+  box-shadow: 0 8px 32px rgba(26,45,79,0.14);
+}
+
+/* The moving strip — flex row of slides */
+.slides-track {
+  display: flex;
+  width: 100%;
+  /* JS sets transform: translateX(-N * 100%) to change slide */
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Individual slide — must be exactly 100% wide of the slideshow box */
+.slide {
+  flex: 0 0 100%;          /* never grow, never shrink, always 100% */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+  Image wrapper — uses the padding-top aspect-ratio trick so every
+  slide image is exactly the same height regardless of source dimensions.
+  16:7 ratio = (7/16)*100 = 43.75%   — adjust the percentage to taste.
+*/
+.slide {
+  position: relative;
+}
+
+.slide img {
+  /* Fixed height — every image is identical */
+  display: block;
+  width: 100%;
+  height: 360px;               /* ← change this one value to resize all slides */
+  object-fit: cover;           /* fills the box, crops edges if needed */
+  object-position: center;
+  flex-shrink: 0;
+}
+
+/* Caption bar below the image */
+.slide-caption {
+  padding: 1.25rem 1.75rem;
+  background: var(--navy-deep);
+  border-top: 2px solid var(--gold);
+  flex-shrink: 0;
+}
+
+.slide-caption h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.slide-caption p {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.55;
+}
+
+/*
+  Prev / Next buttons.
+  Positioned absolute inside .slideshow (which is position:relative).
+  Top is relative to the image height only (not caption).
+  Using calc(360px / 2) to vertically centre in the image area.
+  If you change the img height above, update 360px here too.
+*/
+.slide-btn {
+  position: absolute;
+  top: calc(360px / 2);        /* ← match img height above */
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.90);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--navy);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  z-index: 10;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+  line-height: 1;
+}
+
+.slide-btn:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 5px 16px rgba(201,162,39,0.38);
+}
+
+.slide-prev { left: 1rem; }
+.slide-next { right: 1rem; }
+
+/*
+  Dot indicators — live OUTSIDE .slideshow so they are never clipped.
+  They sit below the slideshow box in normal document flow.
+*/
+.slide-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 1rem 0 0;           /* space between slideshow bottom and dots */
+}
+
+.slide-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.22s, transform 0.22s;
+}
+
+.slide-dot.active {
+  background: var(--gold);
+  transform: scale(1.3);
+}
+
+
+/* ============================================================================
+   12. DONATE SECTION
+   ============================================================================ */
+.donate-section {
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+  padding: var(--section-pad);
+  position: relative;
+  overflow: hidden;
+}
+
+.donate-glow {
+  position: absolute; right: -120px; top: -120px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,162,39,0.12), transparent 60%);
+  pointer-events: none;
+}
+
+.donate-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.donate-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.6rem);
+  color: var(--white);
+  margin-bottom: 0.85rem;
+}
+
+.donate-inner h2 em { color: var(--gold-light); font-style: italic; }
+
+.donate-inner > p {
+  font-size: 0.97rem;
+  color: rgba(255,255,255,0.62);
+  margin-bottom: 2.25rem;
+  line-height: 1.7;
+}
+
+/* Two payment detail cards */
+.donate-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.donate-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  text-align: left;
+}
+
+.donate-card h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+
+.donate-card p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.65;
+}
+
+.donate-card strong { color: var(--white); }
+
+.donate-notice {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.30);
+}
+
+
+/* ============================================================================
+   13. FOOTER
+   ============================================================================ */
+footer {
+  background: var(--navy-deep);
+  padding: 3rem 2rem 2rem;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+  margin-bottom: 1.75rem;
+}
+
+.footer-brand img {
+  height: 52px;
+  margin-bottom: 0.9rem;
+}
+
+.footer-brand p {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.40);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-col h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.55rem; }
+
+.footer-col ul li a {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover { color: var(--white); }
+
+.footer-col ul li span {
+  font-size: 0.84rem;
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-bottom p { font-size: 0.77rem; color: rgba(255,255,255,0.28); }
+.footer-abn      { font-size: 0.77rem; color: rgba(255,255,255,0.22); }
+
+
+/* ============================================================================
+   14. ABOUT PAGE — HERO
+   ============================================================================ */
+.about-hero {
+  background: linear-gradient(155deg, var(--navy-deep), var(--navy));
+  padding: 120px 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.about-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: var(--white);
+  margin-bottom: 1.1rem;
+}
+
+.about-hero h1 em { color: var(--gold-light); font-style: italic; }
+
+.about-hero p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.75;
+}
+
+
+/* ============================================================================
+   15. ABOUT PAGE — BODY SECTIONS
+   ============================================================================ */
+.about-body { background: var(--white); }
+
+.about-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.about-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+.about-section p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 0.9rem;
+}
+
+/* Two-column layout (org overview) */
+.about-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* Organisation info box */
+.bnl-info-box {
+  background: var(--cream);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+}
+
+.bnl-info-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 0.9rem;
+}
+
+.bnl-info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.86rem;
+}
+
+.bnl-info-row:last-child { border-bottom: none; }
+.info-label { color: var(--text-light); font-weight: 500; }
+.info-value  { color: var(--navy); font-weight: 600; text-align: right; }
+
+/* Values list */
+.values-list {
+  list-style: none;
+  margin-top: 1.4rem;
+}
+
+.values-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.93rem;
+  color: var(--text);
+}
+
+/* Letter badge driven by data-letter attribute */
+.values-list li::before {
+  content: attr(data-letter);
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, var(--navy), #1e4060);
+  color: var(--white);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+/* Initiative two-column grid */
+.about-initiative-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+
+/* ============================================================================
+   16. CONTACT SECTION (on About page)
+   ============================================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.contact-icon {
+  width: 34px; height: 34px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  color: var(--navy);
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.form-group { margin-bottom: 1.1rem; }
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.38rem;
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.72rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--white);
+  outline: none;
+  appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26,45,79,0.07);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 115px;
+}
+
+
+/* ============================================================================
+   17. RESPONSIVE — TABLET  (max-width: 900px)
+   ============================================================================ */
+@media (max-width: 900px) {
+
+  /* Hero: logo on top, text below */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .hero-logo-wrap { order: -1; }
+  .hero-logo-wrap img { max-width: 260px; }
+
+  /* Stats: single column */
+  .stats-inner { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* Slideshow: shorter images */
+  .slide img        { height: 280px; }
+  .slide-btn        { top: calc(280px / 2); }
+
+  /* Donate cards: stack */
+  .donate-cards { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+
+  /* About two-col: stack */
+  .about-two-col { grid-template-columns: 1fr; gap: 1.75rem; }
+  .about-initiative-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+
+/* ============================================================================
+   18. RESPONSIVE — MOBILE  (max-width: 640px)
+   ============================================================================ */
+@media (max-width: 640px) {
+
+  /* Show hamburger, hide desktop links */
+  .nav-links  { display: none; }
+  .hamburger  { display: flex; }
+
+  /* Hero buttons stack */
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons a { text-align: center; }
+
+  /* Tighter section padding */
+  .hero-inner     { padding: 2.5rem 1.25rem; }
+  .stats-band     { padding: 2rem 1.25rem; }
+  .gallery-section { padding: 3rem 1.25rem; }
+  .donate-section  { padding: 3rem 1.25rem; }
+  .about-content   { padding: 3rem 1.25rem; }
+
+  /* Slideshow: shorter images */
+  .slide img        { height: 210px; }
+  .slide-btn        { top: calc(210px / 2); width: 36px; height: 36px; font-size: 0.9rem; }
+  .slide-caption    { padding: 1rem 1.1rem; }
+  .slide-caption h3 { font-size: 0.95rem; }
+
+  /* Footer: single column */
+  .footer-top { grid-template-columns: 1fr; }
+
+  /* About: single column grids */
+  .about-initiative-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
