@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1e35"/>
+      <stop offset="50%" style="stop-color:#1a2d4f"/>
+      <stop offset="100%" style="stop-color:#1a3a22"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="50%" cy="60%" r="55%">
+      <stop offset="0%" style="stop-color:#c9a227;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#e8c04a;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#0f1e35;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5a;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0f1e35;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg4)"/>
+  <ellipse cx="600" cy="310" rx="500" ry="260" fill="url(#dawn)"/>
+  <!-- Water / river -->
+  <rect x="0" y="340" width="1200" height="80" fill="url(#water)" opacity="0.7"/>
+  <!-- Water ripples -->
+  <ellipse cx="300" cy="365" rx="80" ry="8" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.2"/>
+  <ellipse cx="900" cy="375" rx="100" ry="9" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.2"/>
+  <ellipse cx="600" cy="360" rx="120" ry="10" fill="none" stroke="white" stroke-width="1" opacity="0.1"/>
+  <!-- Ground on both sides -->
+  <rect x="0" y="310" width="360" height="60" rx="0" fill="#1a3020"/>
+  <rect x="840" y="310" width="360" height="60" fill="#1a3020"/>
+  <!-- Bridge structure (like BNL logo) -->
+  <!-- Bridge deck -->
+  <rect x="200" y="340" width="800" height="18" rx="4" fill="#2a4a6a"/>
+  <!-- Bridge pillars -->
+  <rect x="310" y="340" width="20" height="80" fill="#1a3a58"/>
+  <rect x="870" y="340" width="20" height="80" fill="#1a3a58"/>
+  <!-- Arch -->
+  <path d="M 220 340 Q 600 140 980 340" fill="none" stroke="#c9a227" stroke-width="6" opacity="0.9"/>
+  <!-- Arch cables -->
+  <g stroke="#1a4a6a" stroke-width="2" opacity="0.6">
+    <line x1="340" y1="210" x2="340" y2="340"/>
+    <line x1="420" y1="175" x2="420" y2="340"/>
+    <line x1="510" y1="158" x2="510" y2="340"/>
+    <line x1="600" y1="153" x2="600" y2="340"/>
+    <line x1="690" y1="158" x2="690" y2="340"/>
+    <line x1="780" y1="175" x2="780" y2="340"/>
+    <line x1="860" y1="210" x2="860" y2="340"/>
+  </g>
+  <!-- Person walking across bridge -->
+  <circle cx="580" cy="312" r="16" fill="#e8c04a"/>
+  <rect x="568" y="328" width="24" height="38" rx="6" fill="#e8c04a" opacity="0.9"/>
+  <!-- walking legs -->
+  <line x1="574" y1="366" x2="560" y2="395" stroke="#e8c04a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="586" y1="366" x2="600" y2="395" stroke="#e8c04a" stroke-width="9" stroke-linecap="round"/>
+  <!-- arm forward -->
+  <line x1="592" y1="340" x2="618" y2="355" stroke="#e8c04a" stroke-width="8" stroke-linecap="round"/>
+  <!-- Shadow under person on bridge -->
+  <ellipse cx="580" cy="400" rx="18" ry="5" fill="black" opacity="0.2"/>
+  <!-- Sun reflection in water -->
+  <ellipse cx="600" cy="375" rx="40" ry="12" fill="#c9a227" opacity="0.15"/>
+  <!-- Dawn glow -->
+  <circle cx="600" cy="175" r="45" fill="#c9a227" opacity="0.18"/>
+  <circle cx="600" cy="175" r="30" fill="#e8c04a" opacity="0.22"/>
+  <!-- Birds -->
+  <path d="M 420 120 Q 430 112 440 120" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <path d="M 450 105 Q 462 96 474 105" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+  <path d="M 720 115 Q 732 106 744 115" fill="none" stroke="white" stroke-width="2" opacity="0.6"/>
+  <path d="M 760 98 Q 770 90 780 98" fill="none" stroke="white" stroke-width="2" opacity="0.4"/>
+  <!-- Stars -->
+  <circle cx="150" cy="70" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1050" cy="60" r="2" fill="white" opacity="0.6"/>
+  <circle cx="900" cy="100" r="1.5" fill="white" opacity="0.4"/>
+  <!-- Caption -->
+  <text x="600" y="460" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9" font-style="italic">Reintegration &amp; Renewal</text>
+  <text x="600" y="490" font-family="Arial, sans-serif" font-size="14" fill="#c9a227" text-anchor="middle" opacity="0.8">Walking alongside individuals on the path to a new life</text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2d4f"/>
+      <stop offset="100%" style="stop-color:#0f2a1a"/>
+    </linearGradient>
+    <radialGradient id="centreglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c9a227;stop-opacity:0.35"/>
+      <stop offset="60%" style="stop-color:#3a7d44;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#1a2d4f;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg5)"/>
+  <ellipse cx="600" cy="260" rx="480" ry="300" fill="url(#centreglow)"/>
+  <!-- Decorative circles -->
+  <circle cx="600" cy="230" r="180" fill="none" stroke="#c9a227" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="600" cy="230" r="230" fill="none" stroke="#3a7d44" stroke-width="1" opacity="0.10"/>
+  <circle cx="600" cy="230" r="280" fill="none" stroke="#1a4a6a" stroke-width="1" opacity="0.08"/>
+  <!-- Ground -->
+  <rect x="0" y="400" width="1200" height="120" fill="#0f1e35" opacity="0.5"/>
+  <!-- Many hands/people in circle formation -->
+  <!-- Centre figure -->
+  <circle cx="600" cy="190" r="26" fill="#c9a227"/>
+  <rect x="582" y="216" width="36" height="55" rx="9" fill="#c9a227" opacity="0.9"/>
+  <!-- Left group -->
+  <circle cx="430" cy="220" r="22" fill="#3a7d44"/>
+  <rect x="414" y="242" width="32" height="48" rx="8" fill="#3a7d44" opacity="0.9"/>
+  <!-- arm reaching right -->
+  <line x1="446" y1="255" x2="490" y2="248" stroke="#3a7d44" stroke-width="11" stroke-linecap="round"/>
+  <!-- arm reaching left -->
+  <line x1="414" y1="255" x2="374" y2="248" stroke="#3a7d44" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="330" cy="230" r="18" fill="#1a6a8a"/>
+  <rect x="316" y="248" width="28" height="42" rx="7" fill="#1a6a8a" opacity="0.9"/>
+  <line x1="344" y1="260" x2="376" y2="252" stroke="#1a6a8a" stroke-width="10" stroke-linecap="round"/>
+  <!-- Right group -->
+  <circle cx="770" cy="220" r="22" fill="#e8c04a"/>
+  <rect x="754" y="242" width="32" height="48" rx="8" fill="#e8c04a" opacity="0.9"/>
+  <line x1="754" y1="255" x2="710" y2="248" stroke="#e8c04a" stroke-width="11" stroke-linecap="round"/>
+  <line x1="786" y1="255" x2="826" y2="248" stroke="#e8c04a" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="870" cy="230" r="18" fill="#4e9e5a"/>
+  <rect x="856" y="248" width="28" height="42" rx="7" fill="#4e9e5a" opacity="0.9"/>
+  <line x1="856" y1="260" x2="824" y2="252" stroke="#4e9e5a" stroke-width="10" stroke-linecap="round"/>
+  <!-- Centre hands meeting (reaching in) -->
+  <line x1="582" y1="235" x2="550" y2="245" stroke="#c9a227" stroke-width="12" stroke-linecap="round"/>
+  <line x1="618" y1="235" x2="650" y2="245" stroke="#c9a227" stroke-width="12" stroke-linecap="round"/>
+  <!-- All hands joining in centre -->
+  <circle cx="600" cy="248" r="18" fill="#c9a227" opacity="0.4"/>
+  <circle cx="600" cy="248" r="10" fill="#e8c04a" opacity="0.6"/>
+  <!-- Far left/right smaller people -->
+  <circle cx="200" cy="250" r="16" fill="#2a5c8a" opacity="0.8"/>
+  <rect x="186" y="266" width="26" height="38" rx="6" fill="#2a5c8a" opacity="0.7"/>
+  <line x1="212" y1="276" x2="240" y2="268" stroke="#2a5c8a" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="1000" cy="250" r="16" fill="#5a3a8a" opacity="0.8"/>
+  <rect x="986" y="266" width="26" height="38" rx="6" fill="#5a3a8a" opacity="0.7"/>
+  <line x1="986" y1="276" x2="958" y2="268" stroke="#5a3a8a" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <!-- Glow particles / sparkles -->
+  <circle cx="600" cy="248" r="35" fill="none" stroke="#c9a227" stroke-width="2" opacity="0.3"/>
+  <circle cx="450" cy="130" r="3" fill="#c9a227" opacity="0.6"/>
+  <circle cx="750" cy="120" r="3" fill="#e8c04a" opacity="0.5"/>
+  <circle cx="350" cy="160" r="2" fill="white" opacity="0.5"/>
+  <circle cx="850" cy="150" r="2" fill="white" opacity="0.5"/>
+  <circle cx="600" cy="95" r="4" fill="#c9a227" opacity="0.4"/>
+  <!-- Stars -->
+  <circle cx="100" cy="60" r="2" fill="white" opacity="0.6"/>
+  <circle cx="300" cy="40" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="950" cy="55" r="2" fill="white" opacity="0.6"/>
+  <circle cx="1100" cy="35" r="1.5" fill="white" opacity="0.4"/>
+  <!-- #uniteforgood text -->
+  <text x="600" y="170" font-family="Arial" font-size="16" fill="#c9a227" text-anchor="middle" opacity="0.5" letter-spacing="3">#UNITEFORGOOD</text>
+  <!-- Caption -->
+  <text x="600" y="458" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9" font-style="italic">A Community United</text>
+  <text x="600" y="488" font-family="Arial, sans-serif" font-size="14" fill="#c9a227" text-anchor="middle" opacity="0.8">Together, building bridges — one life, one family at a time</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2d4f"/>
+      <stop offset="100%" style="stop-color:#0f2a1a"/>
+    </linearGradient>
+    <radialGradient id="lampglow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%" style="stop-color:#e8c04a;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#1a2d4f;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg2)"/>
+  <ellipse cx="600" cy="100" rx="450" ry="200" fill="url(#lampglow)"/>
+  <!-- Room floor -->
+  <rect x="0" y="390" width="1200" height="130" fill="#0f1e35" opacity="0.7"/>
+  <!-- Chalkboard / board -->
+  <rect x="320" y="100" width="560" height="280" rx="12" fill="#1a3a2a"/>
+  <rect x="330" y="110" width="540" height="260" rx="8" fill="#1e4a2e"/>
+  <!-- Board border -->
+  <rect x="318" y="98" width="564" height="284" rx="13" fill="none" stroke="#c9a227" stroke-width="3" opacity="0.7"/>
+  <!-- Chalk writing on board -->
+  <text x="600" y="175" font-family="Georgia, serif" font-size="32" fill="white" text-anchor="middle" opacity="0.9" font-style="italic">"Every mind matters."</text>
+  <line x1="380" y1="200" x2="820" y2="200" stroke="white" stroke-width="1" opacity="0.25"/>
+  <!-- Simple equation / learning symbols -->
+  <text x="430" y="240" font-family="Arial" font-size="18" fill="#e8c04a" opacity="0.8">Skills</text>
+  <text x="530" y="240" font-family="Arial" font-size="18" fill="white" opacity="0.5">+</text>
+  <text x="565" y="240" font-family="Arial" font-size="18" fill="#4e9e5a" opacity="0.8">Opportunity</text>
+  <text x="725" y="240" font-family="Arial" font-size="18" fill="white" opacity="0.5">=</text>
+  <text x="755" y="240" font-family="Arial" font-size="18" fill="#e8c04a" opacity="0.8">Freedom</text>
+  <line x1="380" y1="258" x2="820" y2="258" stroke="white" stroke-width="1" opacity="0.15"/>
+  <!-- ABC symbols -->
+  <text x="450" y="310" font-family="Arial" font-size="26" fill="white" opacity="0.3" letter-spacing="20">A  B  C  D</text>
+  <!-- Desk and students silhouettes -->
+  <!-- Desk left -->
+  <rect x="150" y="340" width="180" height="12" rx="4" fill="#2a4a6a"/>
+  <rect x="190" y="352" width="10" height="40" fill="#1e3a58"/>
+  <rect x="300" y="352" width="10" height="40" fill="#1e3a58"/>
+  <!-- Student at left desk -->
+  <circle cx="240" cy="308" r="20" fill="#c9a227" opacity="0.9"/>
+  <rect x="224" y="328" width="32" height="28" rx="6" fill="#c9a227" opacity="0.8"/>
+  <!-- book/paper on desk -->
+  <rect x="195" y="328" width="60" height="14" rx="3" fill="white" opacity="0.6"/>
+  <!-- Desk right -->
+  <rect x="870" y="340" width="180" height="12" rx="4" fill="#2a4a6a"/>
+  <rect x="910" y="352" width="10" height="40" fill="#1e3a58"/>
+  <rect x="1020" y="352" width="10" height="40" fill="#1e3a58"/>
+  <!-- Student at right desk -->
+  <circle cx="960" cy="308" r="20" fill="#3a7d44" opacity="0.9"/>
+  <rect x="944" y="328" width="32" height="28" rx="6" fill="#3a7d44" opacity="0.8"/>
+  <rect x="915" y="328" width="60" height="14" rx="3" fill="white" opacity="0.6"/>
+  <!-- Teacher silhouette -->
+  <circle cx="600" cy="88" r="16" fill="#1a2d4f" stroke="#c9a227" stroke-width="2"/>
+  <rect x="588" y="104" width="24" height="35" rx="5" fill="#1a2d4f" stroke="#c9a227" stroke-width="1.5"/>
+  <!-- pointing arm -->
+  <line x1="612" y1="115" x2="645" y2="125" stroke="#c9a227" stroke-width="4" stroke-linecap="round"/>
+  <!-- Light bulb above board -->
+  <circle cx="600" cy="72" r="10" fill="#e8c04a" opacity="0.7"/>
+  <line x1="600" y1="82" x2="600" y2="98" stroke="#c9a227" stroke-width="2"/>
+  <!-- Stars in bg -->
+  <circle cx="80" cy="60" r="2" fill="white" opacity="0.5"/>
+  <circle cx="200" cy="30" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1050" cy="55" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1150" cy="30" r="1.5" fill="white" opacity="0.6"/>
+  <!-- Caption -->
+  <text x="600" y="460" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" opacity="0.9" font-style="italic">Education &amp; Skills Training</text>
+  <text x="600" y="490" font-family="Arial, sans-serif" font-size="14" fill="#c9a227" text-anchor="middle" opacity="0.8">Equipping individuals with tools for a better future</text>
+</svg>
