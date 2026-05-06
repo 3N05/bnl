@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridgeworks Network Limited — We Care</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo" onclick="showPage('home'); return false;">
+        <img src="assets/logo.jpeg" alt="Bridgeworks Network Limited">
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Bridgeworks Network Limited</span>
+          <span class="nav-logo-tagline">We Care</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+        <li><a href="#" onclick="showPage('about'); scrollToSection('about-initiatives'); return false;">Our Work</a></li>
+        <li><a href="#" onclick="showPage('about'); scrollToSection('about-contact'); return false;">Contact</a></li>
+        <li><a href="#" class="nav-cta" onclick="showPage('home'); scrollToSection('donate'); return false;">Donate</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#" onclick="showPage('about'); closeMobileMenu(); return false;">About</a>
+      <a href="#" onclick="showPage('about'); scrollToSection('about-initiatives'); closeMobileMenu(); return false;">Our Work</a>
+      <a href="#" onclick="showPage('about'); scrollToSection('about-contact'); closeMobileMenu(); return false;">Contact</a>
+      <a href="#" class="mob-cta" onclick="showPage('home'); scrollToSection('donate'); closeMobileMenu(); return false;">Donate Now</a>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════
+       HOME PAGE
+  ════════════════════════════════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- ── HERO ──────────────────────────────────────────────────────
+         Left: dark navy — headline + buttons
+         Right: cream — logo sits on its own background colour naturally
+    ─────────────────────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-inner">
+
+        <div class="hero-text">
+          <h1>Restoring <em>Hope</em>,<br>Transforming Lives.</h1>
+          <p>We support vulnerable communities impacted by incarceration — giving children and families the care they need to flourish.</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary" onclick="scrollToSection('donate'); return false;">Donate Now</a>
+            <a href="#" class="btn-outline" onclick="showPage('about'); return false;">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-logo-wrap">
+          <img src="assets/logo.jpeg" alt="Bridgeworks Network Limited">
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── STATS STRIP ────────────────────────────────────────────────
+         Two quick facts. Builds trust at a glance.
+    ─────────────────────────────────────────────────────────────────── -->
+    <div class="stats-band reveal">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-num">6<span class="stat-unit"> Values</span></span>
+          <p>Guiding All We Do</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100<span class="stat-unit">%</span></span>
+          <p>Community-Driven</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ── GALLERY SLIDESHOW ──────────────────────────────────────────
+         Vision carousel. Replace SVG files with real photos when ready.
+         Update the alt text and captions to match.
+    ─────────────────────────────────────────────────────────────────── -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-inner">
+
+        <div class="gallery-header reveal">
+          <div class="section-label">Our Vision</div>
+          <h2 class="section-title">What We Stand For</h2>
+          <p class="section-sub">Every initiative we run is driven by one belief — that every person, regardless of their past, deserves hope, dignity, and a future.</p>
+        </div>
+
+        <div class="slideshow-wrap reveal">
+          <div class="slideshow" id="slideshow">
+
+            <div class="slides-track" id="slides-track">
+
+              <div class="slide">
+                <img src="assets/slide1.svg" alt="Reaching out to vulnerable communities">
+                <div class="slide-caption">
+                  <h3>Reaching the Vulnerable</h3>
+                  <p>We go where the need is greatest — bringing care, resources, and presence to those who have been forgotten.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/slide2.svg" alt="Education and skills for a better future">
+                <div class="slide-caption">
+                  <h3>Education as Empowerment</h3>
+                  <p>We believe knowledge and skills are the foundation of lasting change — opening doors that were once closed.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/slide3.svg" alt="Children deserve safety and a future">
+                <div class="slide-caption">
+                  <h3>Every Child Matters</h3>
+                  <p>No child should grow up defined by circumstances beyond their control. We work to give them safety, love, and opportunity.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/slide4.svg" alt="A path forward after incarceration">
+                <div class="slide-caption">
+                  <h3>A Second Chance</h3>
+                  <p>We walk alongside individuals as they rebuild — because redemption is possible and every life has worth.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/slide5.svg" alt="A community united for good">
+                <div class="slide-caption">
+                  <h3>Stronger Together</h3>
+                  <p>Real change happens when communities come together. We are building bridges — and we invite you to be part of it.</p>
+                </div>
+              </div>
+
+            </div><!-- /slides-track -->
+
+            <button class="slide-btn slide-prev" id="slide-prev" aria-label="Previous slide">&#8592;</button>
+            <button class="slide-btn slide-next" id="slide-next" aria-label="Next slide">&#8594;</button>
+
+          </div><!-- /slideshow -->
+
+          <div class="slide-dots" id="slide-dots"></div>
+
+        </div><!-- /slideshow-wrap -->
+      </div>
+    </section>
+
+
+    <!-- ── DONATE ─────────────────────────────────────────────────────
+         Primary conversion goal of the landing page.
+    ─────────────────────────────────────────────────────────────────── -->
+    <section class="donate-section" id="donate">
+      <div class="donate-glow"></div>
+      <div class="donate-inner">
+
+        <div class="reveal">
+          <div class="section-label donate-label">Make a Difference</div>
+          <h2>Your Gift <em>Changes Lives</em></h2>
+          <p>Every contribution helps Bridgeworks Network Limited bring life-changing support to those who need it most. Thank you for your generosity.</p>
+        </div>
+
+        <div class="donate-cards reveal">
+          <div class="donate-card">
+            <h4>Bank Transfer</h4>
+            <p>
+              <strong>Acc. Name:</strong> J. Nalianya<br>
+              <strong>BSB:</strong> 083 495<br>
+              <strong>Account:</strong> 161 373 692
+            </p>
+          </div>
+          <div class="donate-card">
+            <h4>PayID</h4>
+            <p>
+              <strong>PayID:</strong> 0434 356 852<br><br>
+              Use your banking app's PayID for fast, secure transfers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ════════════════════════════════════
+       ABOUT PAGE
+  ════════════════════════════════════════ -->
+  <div class="page" id="page-about">
+
+    <div class="about-hero">
+      <div class="about-hero-inner">
+        <div class="about-page-tag">About BNL</div>
+        <h1>Who We <em>Are</em></h1>
+        <p>An Australian-registered organisation working locally and globally to restore hope and transform lives through holistic, compassionate care.</p>
+      </div>
+    </div>
+
+    <div class="about-body">
+      <div class="about-content">
+
+        <!-- Organisation overview -->
+        <div class="about-section reveal">
+          <div class="section-label">About BNL</div>
+          <h2>Bridgeworks Network Limited</h2>
+          <div class="divider"></div>
+          <div class="about-two-col">
+            <div>
+              <p>Bridgeworks Network Limited (BNL) is an Australian-registered organisation (ABN 82 695 253 126), working locally and globally to restore hope and transform lives through holistic care.</p>
+              <p>The name "Bridgeworks" reflects our core purpose — we build bridges between communities, between hope and despair, and between isolation and belonging. We believe that with the right support, every person has the capacity to flourish.</p>
+            </div>
+            <div>
+              <div class="bnl-info-box">
+                <h3>Organisation Details</h3>
+                <div class="bnl-info-row">
+                  <span class="info-label">Full Name</span>
+                  <span class="info-value">Bridgeworks Network Limited</span>
+                </div>
+                <div class="bnl-info-row">
+                  <span class="info-label">Abbreviation</span>
+                  <span class="info-value">BNL</span>
+                </div>
+                <div class="bnl-info-row">
+                  <span class="info-label">ABN</span>
+                  <span class="info-value">82 695 253 126</span>
+                </div>
+                <div class="bnl-info-row">
+                  <span class="info-label">Registered In</span>
+                  <span class="info-value">Australia</span>
+                </div>
+                <div class="bnl-info-row">
+                  <span class="info-label">Operations</span>
+                  <span class="info-value">Local &amp; Global</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="about-section reveal">
+          <div class="section-label">Our Mission</div>
+          <h2>Restoring Hope, Transforming Lives</h2>
+          <div class="divider"></div>
+          <p>Our mission is simple but powerful: <strong>Restoring hope, transforming lives.</strong> Everything BNL does flows from this commitment — to see vulnerable communities lifted from cycles of hardship and given the tools to build a lasting future.</p>
+          <p>We believe in holistic care — addressing not just immediate needs but the deeper roots of disadvantage, including social isolation, trauma, and lack of opportunity.</p>
+        </div>
+
+        <!-- Values -->
+        <div class="about-section reveal">
+          <div class="section-label">Our Values</div>
+          <h2>We Care</h2>
+          <div class="divider"></div>
+          <p>Our six core values — captured in the phrase "We Care" — guide every decision, programme, and relationship we build.</p>
+          <ul class="values-list">
+            <li data-letter="W"><strong>Wellbeing</strong> — Prioritising the health and flourishing of every person we serve</li>
+            <li data-letter="E"><strong>Empathy</strong> — Listening deeply and walking alongside those in need</li>
+            <li data-letter="C"><strong>Compassion</strong> — Acting with warmth and genuine care for human dignity</li>
+            <li data-letter="A"><strong>Accountability</strong> — Transparent and responsible stewardship of trust and resources</li>
+            <li data-letter="R"><strong>Respect</strong> — Honouring the worth of every individual, regardless of circumstances</li>
+            <li data-letter="E"><strong>Effectiveness</strong> — Striving for measurable, lasting impact in all we do</li>
+          </ul>
+        </div>
+
+        <!-- Initiatives -->
+        <div class="about-section reveal" id="about-initiatives">
+          <div class="section-label">What We Do</div>
+          <h2>Our Initiatives</h2>
+          <div class="divider"></div>
+          <p>In partnership with the <strong>Reuben Wairicu Foundation</strong> — a registered not-for-profit in Kenya — BNL supports vulnerable communities impacted by incarceration.</p>
+          <div class="about-initiative-grid">
+
+            <div class="initiative-card">
+              <div class="partner-badge">&#127472;&#127466; Kenya Partnership</div>
+              <div class="initiative-icon">&#127968;</div>
+              <h3>Community Restoration</h3>
+              <p>Safe housing, healthcare and education for children living inside prisons with their parents — ensuring their future isn't defined by present circumstances.</p>
+              <ul class="support-list">
+                <li>Safe housing for families</li>
+                <li>Healthcare access</li>
+                <li>Children's education</li>
+              </ul>
+            </div>
+
+            <div class="initiative-card">
+              <div class="partner-badge">&#128273; Reintegration Program</div>
+              <div class="initiative-icon">&#127758;</div>
+              <h3>Life After Prison</h3>
+              <p>Skills training, mentorship and reintegration support for individuals rebuilding their lives — because everyone deserves a second chance.</p>
+              <ul class="support-list">
+                <li>Vocational skills training</li>
+                <li>Reintegration support</li>
+                <li>Ongoing mentorship</li>
+              </ul>
+            </div>
+
+          </div>
+          <p class="initiatives-note">With limited resources, BNL relies on the generosity of individuals and organisations to bring these life-changing initiatives to life.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="about-section reveal" id="about-contact">
+          <div class="section-label">Get in Touch</div>
+          <h2>Contact Us</h2>
+          <div class="divider"></div>
+          <p>We'd love to hear from you — whether to get involved, partner with us, or simply learn more.</p>
+
+          <div class="contact-grid">
+
+            <div class="contact-info">
+              <div class="contact-detail">
+                <div class="contact-icon">&#128222;</div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  +61 434 356 853
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-icon">&#128205;</div>
+                <div>
+                  <div class="contact-label">Registered</div>
+                  Australia (ABN 82 695 253 126)
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-icon">&#127758;</div>
+                <div>
+                  <div class="contact-label">Operations</div>
+                  Local &amp; Global
+                </div>
+              </div>
+              <div class="contact-hashtags">
+                <div class="section-label">Join the Conversation</div>
+                <div class="hashtags">
+                  <span class="hashtag">#UniteForGood</span>
+                  <span class="hashtag">#TransformLives</span>
+                  <span class="hashtag">#MakeADifference</span>
+                  <span class="hashtag">#BNL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3 class="form-title">Send a Message</h3>
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-reason">I'd like to&hellip;</label>
+                <select id="contact-reason">
+                  <option value="">Select a reason</option>
+                  <option>Learn more about BNL</option>
+                  <option>Make a donation enquiry</option>
+                  <option>Partner with BNL</option>
+                  <option>Volunteer or get involved</option>
+                  <option>General enquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" placeholder="How can we help you?"></textarea>
+              </div>
+              <button class="btn-submit" id="submit-btn">Send Message</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Donate CTA at bottom of about page -->
+        <div class="about-section about-cta-section reveal">
+          <h3>Ready to make a difference?</h3>
+          <p>Your donation — however small — changes lives.</p>
+          <a href="#" class="btn-primary" onclick="showPage('home'); scrollToSection('donate'); return false;">Donate Now</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /page-about -->
+
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <img src="assets/logo.jpeg" alt="Bridgeworks Network Limited">
+          <p>Restoring hope and transforming lives through holistic, compassionate care — locally and globally.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+            <li><a href="#" onclick="showPage('about'); return false;">About</a></li>
+            <li><a href="#" onclick="showPage('about'); scrollToSection('about-initiatives'); return false;">Our Work</a></li>
+            <li><a href="#" onclick="showPage('about'); scrollToSection('about-contact'); return false;">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Donate</h4>
+          <ul>
+            <li><span>Acc: J. Nalianya</span></li>
+            <li><span>BSB: 083 495</span></li>
+            <li><span>Acc: 161 373 692</span></li>
+            <li><span>PayID: 0434 356 852</span></li>
+            <li><span>&#128222; +61 434 356 853</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bridgeworks Network Limited. All rights reserved.</p>
+        <p class="footer-abn">ABN 82 695 253 126</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
