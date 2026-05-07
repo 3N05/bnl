@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1e35"/>
+      <stop offset="100%" stop-color="#1a2d4f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0f1e35" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c04a"/>
+      <stop offset="100%" stop-color="#c9a227"/>
+    </linearGradient>
+    <linearGradient id="grn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4e9e5a"/>
+      <stop offset="100%" stop-color="#3a7d44"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#glow)"/>
+
+  <!-- Stars -->
+  <circle cx="90"  cy="48"  r="1.8" fill="white" opacity="0.5"/>
+  <circle cx="260" cy="28"  r="1.4" fill="white" opacity="0.4"/>
+  <circle cx="450" cy="42"  r="1.4" fill="white" opacity="0.35"/>
+  <circle cx="680" cy="32"  r="1.8" fill="white" opacity="0.5"/>
+  <circle cx="870" cy="48"  r="1.4" fill="white" opacity="0.4"/>
+  <circle cx="1060" cy="26" r="1.8" fill="white" opacity="0.5"/>
+  <circle cx="1160" cy="62" r="1.4" fill="white" opacity="0.35"/>
+  <circle cx="180" cy="95"  r="1.2" fill="white" opacity="0.3"/>
+  <circle cx="980" cy="80"  r="1.2" fill="white" opacity="0.3"/>
+
+  <!-- Bridge arc motif — BNL identity -->
+  <path d="M 150 440 Q 600 80  1050 440" fill="none" stroke="#c9a227" stroke-width="2.5" opacity="0.20"/>
+  <path d="M 220 440 Q 600 140 980 440"  fill="none" stroke="#c9a227" stroke-width="1.5" opacity="0.13"/>
+  <path d="M 290 440 Q 600 200 910 440"  fill="none" stroke="#3a7d44" stroke-width="1"   opacity="0.10"/>
+
+  <!-- Ground -->
+  <rect x="0" y="390" width="1200" height="90" fill="#08131f"/>
+  <line x1="0" y1="390" x2="1200" y2="390" stroke="#1e3a58" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- === FIGURES === -->
+
+  <!-- Far-left silhouette (navy) -->
+  <circle cx="175" cy="300" r="22" fill="#1a4a6a"/>
+  <rect x="159" y="322" width="32" height="65" rx="9" fill="#1a4a6a"/>
+  <line x1="191" y1="340" x2="228" y2="330" stroke="#1a4a6a" stroke-width="12" stroke-linecap="round"/>
+  <line x1="167" y1="387" x2="155" y2="420" stroke="#1a4a6a" stroke-width="11" stroke-linecap="round"/>
+  <line x1="183" y1="387" x2="191" y2="420" stroke="#1a4a6a" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- Left adult (gold) reaching toward child -->
+  <circle cx="375" cy="268" r="30" fill="url(#gold)"/>
+  <rect x="353" y="298" width="44" height="75" rx="11" fill="url(#gold)"/>
+  <line x1="397" y1="320" x2="468" y2="308" stroke="#e8c04a" stroke-width="15" stroke-linecap="round"/>
+  <line x1="364" y1="373" x2="350" y2="418" stroke="#c9a227" stroke-width="13" stroke-linecap="round"/>
+  <line x1="382" y1="373" x2="396" y2="418" stroke="#c9a227" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Child centre (cream gold) -->
+  <circle cx="535" cy="288" r="22" fill="#e8c04a"/>
+  <rect x="517" y="310" width="36" height="56" rx="9" fill="#e8c04a"/>
+  <line x1="517" y1="326" x2="483" y2="316" stroke="#e8c04a" stroke-width="11" stroke-linecap="round"/>
+  <line x1="553" y1="326" x2="584" y2="316" stroke="#e8c04a" stroke-width="11" stroke-linecap="round"/>
+  <line x1="525" y1="366" x2="513" y2="410" stroke="#c9a227" stroke-width="11" stroke-linecap="round"/>
+  <line x1="543" y1="366" x2="555" y2="410" stroke="#c9a227" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- Right adult (green) reaching toward child -->
+  <circle cx="700" cy="268" r="30" fill="url(#grn)"/>
+  <rect x="678" y="298" width="44" height="75" rx="11" fill="url(#grn)"/>
+  <line x1="678" y1="320" x2="607" y2="308" stroke="#4e9e5a" stroke-width="15" stroke-linecap="round"/>
+  <line x1="689" y1="373" x2="675" y2="418" stroke="#3a7d44" stroke-width="13" stroke-linecap="round"/>
+  <line x1="707" y1="373" x2="721" y2="418" stroke="#3a7d44" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Far-right silhouette (dark green) -->
+  <circle cx="900" cy="300" r="22" fill="#2a5c3a"/>
+  <rect x="884" y="322" width="32" height="65" rx="9" fill="#2a5c3a"/>
+  <line x1="884" y1="340" x2="847" y2="330" stroke="#2a5c3a" stroke-width="12" stroke-linecap="round"/>
+  <line x1="892" y1="387" x2="880" y2="420" stroke="#2a5c3a" stroke-width="11" stroke-linecap="round"/>
+  <line x1="908" y1="387" x2="916" y2="420" stroke="#2a5c3a" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- Glow at joined hands -->
+  <circle cx="535" cy="318" r="26" fill="#c9a227" opacity="0.10"/>
+  <circle cx="535" cy="318" r="13" fill="#e8c04a" opacity="0.14"/>
+
+  <!-- Subtle label -->
+  <text x="600" y="76" font-family="Arial, sans-serif" font-size="12" fill="#c9a227"
+        text-anchor="middle" opacity="0.35" letter-spacing="4">#UNITEFORGOOD</text>
+</svg>

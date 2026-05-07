@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1e35"/>
+      <stop offset="100%" stop-color="#1a2d4f"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="50%" cy="72%" r="65%">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#3a7d44" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0f1e35" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sunhalo" cx="50%" cy="72%" r="18%">
+      <stop offset="0%" stop-color="#e8c04a" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#e8c04a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a22"/>
+      <stop offset="100%" stop-color="#0a1a10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#dawn)"/>
+  <ellipse cx="600" cy="380" rx="260" ry="80" fill="url(#sunhalo)"/>
+
+  <!-- Stars -->
+  <circle cx="80"  cy="50"  r="2"   fill="white" opacity="0.60"/>
+  <circle cx="220" cy="32"  r="1.5" fill="white" opacity="0.45"/>
+  <circle cx="430" cy="55"  r="1.5" fill="white" opacity="0.38"/>
+  <circle cx="780" cy="38"  r="2"   fill="white" opacity="0.55"/>
+  <circle cx="970" cy="52"  r="1.5" fill="white" opacity="0.42"/>
+  <circle cx="1100" cy="28" r="2"   fill="white" opacity="0.60"/>
+  <circle cx="330" cy="90"  r="1.2" fill="white" opacity="0.30"/>
+  <circle cx="900" cy="85"  r="1.2" fill="white" opacity="0.28"/>
+
+  <!-- Rainbow arcs (hope motif) -->
+  <path d="M 100 430 Q 600 60  1100 430" fill="none" stroke="#e8c04a" stroke-width="5"   opacity="0.14"/>
+  <path d="M 145 430 Q 600 110 1055 430" fill="none" stroke="#4e9e5a" stroke-width="4"   opacity="0.11"/>
+  <path d="M 190 430 Q 600 160 1010 430" fill="none" stroke="#2a6a8a" stroke-width="3"   opacity="0.09"/>
+
+  <!-- Ground -->
+  <ellipse cx="600" cy="490" rx="850" ry="140" fill="url(#ground)" opacity="0.75"/>
+  <rect x="0" y="400" width="1200" height="80" fill="#0f1a0e" opacity="0.60"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#2a4a22" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- Kite -->
+  <polygon points="720,100 745,150 720,185 695,150" fill="#c9a227" opacity="0.60"/>
+  <line x1="720" y1="185" x2="745" y2="300" stroke="#c9a227" stroke-width="1.5" opacity="0.38" stroke-dasharray="5,5"/>
+  <!-- kite tail bows -->
+  <ellipse cx="730" cy="220" rx="7" ry="4" fill="#e8c04a" opacity="0.40" transform="rotate(-20 730 220)"/>
+  <ellipse cx="737" cy="255" rx="7" ry="4" fill="#e8c04a" opacity="0.35" transform="rotate(-15 737 255)"/>
+
+  <!-- Child 1 — jumping, gold -->
+  <circle cx="310" cy="290" r="20" fill="#e8c04a"/>
+  <rect   x="298" y="310" width="24" height="42" rx="7" fill="#e8c04a" opacity="0.92"/>
+  <line x1="298" y1="320" x2="272" y2="303" stroke="#e8c04a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="322" y1="320" x2="348" y2="303" stroke="#e8c04a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="304" y1="352" x2="290" y2="388" stroke="#c9a227" stroke-width="10" stroke-linecap="round"/>
+  <line x1="316" y1="352" x2="330" y2="388" stroke="#c9a227" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Child 2 — green -->
+  <circle cx="470" cy="298" r="18" fill="#4e9e5a"/>
+  <rect   x="458" y="316" width="24" height="40" rx="7" fill="#4e9e5a" opacity="0.92"/>
+  <line x1="458" y1="328" x2="435" y2="318" stroke="#4e9e5a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="482" y1="328" x2="505" y2="320" stroke="#4e9e5a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="464" y1="356" x2="454" y2="390" stroke="#3a7d44" stroke-width="9" stroke-linecap="round"/>
+  <line x1="476" y1="356" x2="484" y2="390" stroke="#3a7d44" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Child 3 — centre, bigger, gold -->
+  <circle cx="620" cy="282" r="22" fill="#c9a227"/>
+  <rect   x="606" y="304" width="28" height="46" rx="8" fill="#c9a227" opacity="0.92"/>
+  <line x1="606" y1="316" x2="578" y2="306" stroke="#c9a227" stroke-width="11" stroke-linecap="round"/>
+  <line x1="634" y1="316" x2="662" y2="306" stroke="#c9a227" stroke-width="11" stroke-linecap="round"/>
+  <line x1="612" y1="350" x2="600" y2="388" stroke="#b88e20" stroke-width="11" stroke-linecap="round"/>
+  <line x1="628" y1="350" x2="638" y2="388" stroke="#b88e20" stroke-width="11" stroke-linecap="round"/>
+  <!-- kite string connects to child 3 hand -->
+  <line x1="662" y1="306" x2="720" y2="185" stroke="#c9a227" stroke-width="1.5" opacity="0.40" stroke-dasharray="5,5"/>
+
+  <!-- Child 4 — navy-teal -->
+  <circle cx="770" cy="298" r="18" fill="#1a6a8a"/>
+  <rect   x="758" y="316" width="24" height="40" rx="7" fill="#1a6a8a" opacity="0.92"/>
+  <line x1="758" y1="328" x2="736" y2="320" stroke="#1a6a8a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="782" y1="328" x2="804" y2="318" stroke="#1a6a8a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="764" y1="356" x2="754" y2="390" stroke="#1a6a8a" stroke-width="9" stroke-linecap="round"/>
+  <line x1="776" y1="356" x2="784" y2="390" stroke="#1a6a8a" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Child 5 — green -->
+  <circle cx="920" cy="306" r="17" fill="#3a7d44"/>
+  <rect   x="909" y="323" width="22" height="38" rx="6" fill="#3a7d44" opacity="0.92"/>
+  <line x1="909" y1="334" x2="888" y2="326" stroke="#3a7d44" stroke-width="8" stroke-linecap="round"/>
+  <line x1="931" y1="334" x2="952" y2="326" stroke="#3a7d44" stroke-width="8" stroke-linecap="round"/>
+  <line x1="915" y1="361" x2="907" y2="392" stroke="#2a5c3a" stroke-width="8" stroke-linecap="round"/>
+  <line x1="925" y1="361" x2="932" y2="392" stroke="#2a5c3a" stroke-width="8" stroke-linecap="round"/>
+</svg>

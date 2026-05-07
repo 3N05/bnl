@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2d4f"/>
+      <stop offset="100%" stop-color="#0f1e35"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="52%" r="42%">
+      <stop offset="0%" stop-color="#c9a227" stop-opacity="0.38"/>
+      <stop offset="55%" stop-color="#3a7d44" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#1a2d4f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centreglow" cx="50%" cy="52%" r="12%">
+      <stop offset="0%" stop-color="#e8c04a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#e8c04a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8c04a"/>
+      <stop offset="100%" stop-color="#c9a227"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4e9e5a"/>
+      <stop offset="100%" stop-color="#3a7d44"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <rect width="1200" height="480" fill="url(#glow)"/>
+  <rect width="1200" height="480" fill="url(#centreglow)"/>
+
+  <!-- Stars -->
+  <circle cx="85"   cy="44"  r="1.8" fill="white" opacity="0.55"/>
+  <circle cx="240"  cy="26"  r="1.4" fill="white" opacity="0.42"/>
+  <circle cx="960"  cy="38"  r="1.8" fill="white" opacity="0.55"/>
+  <circle cx="1120" cy="50"  r="1.4" fill="white" opacity="0.42"/>
+  <circle cx="1170" cy="28"  r="1.8" fill="white" opacity="0.55"/>
+  <circle cx="390"  cy="80"  r="1.2" fill="white" opacity="0.28"/>
+  <circle cx="820"  cy="72"  r="1.2" fill="white" opacity="0.28"/>
+
+  <!-- Decorative concentric rings -->
+  <circle cx="600" cy="252" r="195" fill="none" stroke="#c9a227" stroke-width="1.2" opacity="0.12"/>
+  <circle cx="600" cy="252" r="155" fill="none" stroke="#3a7d44" stroke-width="1"   opacity="0.10"/>
+  <circle cx="600" cy="252" r="115" fill="none" stroke="#1a4a6a" stroke-width="1"   opacity="0.08"/>
+
+  <!-- Floor -->
+  <rect x="0" y="400" width="1200" height="80" fill="#08131f" opacity="0.60"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#1e3a58" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- === FIGURES in loose circle === -->
+
+  <!-- Left figure (gold) -->
+  <circle cx="368" cy="224" r="26" fill="url(#g1)"/>
+  <rect   x="350" y="250" width="36" height="68" rx="10" fill="url(#g1)"/>
+  <!-- arm reaching right (toward centre) -->
+  <line x1="386" y1="268" x2="442" y2="258" stroke="#e8c04a" stroke-width="13" stroke-linecap="round"/>
+  <!-- arm reaching left -->
+  <line x1="350" y1="268" x2="306" y2="260" stroke="#e8c04a" stroke-width="13" stroke-linecap="round"/>
+  <line x1="358" y1="318" x2="344" y2="368" stroke="#c9a227" stroke-width="12" stroke-linecap="round"/>
+  <line x1="376" y1="318" x2="390" y2="368" stroke="#c9a227" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Far-left (dark navy blue) -->
+  <circle cx="210" cy="240" r="20" fill="#1a4a6a"/>
+  <rect   x="196" y="260" width="28" height="55" rx="8" fill="#1a4a6a"/>
+  <line x1="224" y1="275" x2="260" y2="265" stroke="#1a4a6a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="196" y1="275" x2="165" y2="268" stroke="#1a4a6a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="202" y1="315" x2="192" y2="355" stroke="#1a4a6a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="218" y1="315" x2="226" y2="355" stroke="#1a4a6a" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Centre figure — tallest, gold -->
+  <circle cx="600" cy="200" r="30" fill="url(#g1)"/>
+  <rect   x="580" y="230" width="40" height="80" rx="11" fill="url(#g1)"/>
+  <line x1="580" y1="250" x2="536" y2="262" stroke="#e8c04a" stroke-width="14" stroke-linecap="round"/>
+  <line x1="620" y1="250" x2="664" y2="262" stroke="#e8c04a" stroke-width="14" stroke-linecap="round"/>
+  <line x1="588" y1="310" x2="574" y2="368" stroke="#c9a227" stroke-width="13" stroke-linecap="round"/>
+  <line x1="608" y1="310" x2="622" y2="368" stroke="#c9a227" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Right figure (green) -->
+  <circle cx="832" cy="224" r="26" fill="url(#g2)"/>
+  <rect   x="814" y="250" width="36" height="68" rx="10" fill="url(#g2)"/>
+  <line x1="814" y1="268" x2="758" y2="258" stroke="#4e9e5a" stroke-width="13" stroke-linecap="round"/>
+  <line x1="850" y1="268" x2="894" y2="260" stroke="#4e9e5a" stroke-width="13" stroke-linecap="round"/>
+  <line x1="822" y1="318" x2="808" y2="368" stroke="#3a7d44" stroke-width="12" stroke-linecap="round"/>
+  <line x1="840" y1="318" x2="854" y2="368" stroke="#3a7d44" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Far-right (dark green) -->
+  <circle cx="990" cy="240" r="20" fill="#2a5c3a"/>
+  <rect   x="976" y="260" width="28" height="55" rx="8" fill="#2a5c3a"/>
+  <line x1="976" y1="275" x2="940" y2="265" stroke="#2a5c3a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="1004" y1="275" x2="1035" y2="268" stroke="#2a5c3a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="982" y1="315" x2="972" y2="355" stroke="#2a5c3a" stroke-width="10" stroke-linecap="round"/>
+  <line x1="998" y1="315" x2="1006" y2="355" stroke="#2a5c3a" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Centre joining glow — hands meeting -->
+  <circle cx="600" cy="258" r="38" fill="#c9a227" opacity="0.10"/>
+  <circle cx="600" cy="258" r="20" fill="#e8c04a" opacity="0.15"/>
+  <circle cx="600" cy="258" r="9"  fill="#e8c04a" opacity="0.22"/>
+
+  <!-- Sparkle dots around centre -->
+  <circle cx="558" cy="232" r="3.5" fill="#c9a227" opacity="0.55"/>
+  <circle cx="642" cy="232" r="3.5" fill="#c9a227" opacity="0.55"/>
+  <circle cx="600" cy="212" r="4"   fill="#e8c04a" opacity="0.48"/>
+  <circle cx="565" cy="280" r="3"   fill="#c9a227" opacity="0.40"/>
+  <circle cx="635" cy="280" r="3"   fill="#c9a227" opacity="0.40"/>
+
+  <!-- #uniteforgood -->
+  <text x="600" y="74" font-family="Arial, sans-serif" font-size="12" fill="#c9a227"
+        text-anchor="middle" opacity="0.38" letter-spacing="4">#UNITEFORGOOD</text>
+</svg>
